@@ -6,8 +6,11 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,7 +24,9 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": 
+    ["node", "jest", "@testing-library/jest-dom,", "cypress" ],
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

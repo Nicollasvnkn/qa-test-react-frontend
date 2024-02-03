@@ -136,7 +136,7 @@ export function Cart() {
               alt="Avatar de Empty, para apresetação do carrinho quando ele se encontra vazio."
             />
 
-            <Button.Container onClick={() => navigate("/")}>
+            <Button.Container onClick={() => navigate("/")} data-cy="back-button">
               Voltar
             </Button.Container>
           </EmptyContainer>
@@ -164,13 +164,13 @@ export function Cart() {
             />
           ))}
           <Table.Footer>
-            <Button.Container
-              onClick={handleFinishPurchase}
-              disabled={isLoadingState}
-            >
-              Finalizar pedido
-            </Button.Container>
-
+          <Button.Container
+            onClick={handleFinishPurchase}
+            disabled={isLoadingState}
+            data-cy="finish-purchase"
+          >
+            Finalizar pedido
+          </Button.Container>
             <Total>
               <span>TOTAL</span>
               <strong>{total}</strong>
@@ -222,12 +222,13 @@ export function Cart() {
             </Table.Row>
           ))}
           <Table.Footer>
-            <Button.Container
-              onClick={handleFinishPurchase}
-              disabled={isLoadingState}
-            >
-              Finalizar pedido
-            </Button.Container>
+          <Button.Container
+            onClick={handleFinishPurchase}
+            disabled={isLoadingState}
+            data-cy="finish-purchase"
+          >
+            Finalizar pedido
+          </Button.Container>
             <Total>
               <span>TOTAL</span>
               <strong>{total}</strong>

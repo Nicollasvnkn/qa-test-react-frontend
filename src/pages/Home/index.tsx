@@ -57,16 +57,17 @@ export function Home() {
             (cartProduct) => cartProduct.id === product.id
           );
           return (
-            <li key={product.id}>
+            <li key={product.id} data-cy={`movie-item-${product.id}`}>
               <Card.Container>
-                <Card.Image src={product.imageUrl} />
+                <Card.Image src={product.imageUrl} alt={product.title} data-cy={`movie-cover-${product.id}`} /> {/* Add data-cy here for the image */}
                 <Card.Title text={product.title} />
-                <Card.Price price={product.price} />
+                <Card.Price price={product.price} data-cy={`movie-price-${product.id}`} />
                 <Button.Container
                   variant={productInCart ? "success" : "default"}
                   onClick={() => handleAddProduct(product)}
                   disabled={isAddProductLoadingState}
-                >
+                  data-cy={`add-to-cart-${product.id}`} // This is where you add the data-cy attribute
+                  >
                   <Button.Icon>
                     <MdOutlineAddShoppingCart size={16} color="#ffff" />
                     {productInCart?.quantity ?? 0}

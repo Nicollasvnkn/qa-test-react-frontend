@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartProductRow comparar a pagina com o snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="sc-hKgKIp klAmza"
+  >
+    <div
+      class="sc-jSguLX burahQ"
+    >
+      <img
+        alt="Product Title"
+        data-cy="product-image-1"
+        src="image-url.jpg"
+      />
+      <div>
+        <strong>
+          Product Title
+        </strong>
+        <span
+          data-cy="product-price-1"
+        >
+          R$ 29,99
+        </span>
+         // And here for the price
+      </div>
+    </div>
+    <div
+      class="sc-gKsecS jBPPuH"
+    >
+      <button
+        class="sc-iBPTVF hjnMhy"
+        data-cy="decrement-product-1"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="20"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </button>
+      <input
+        data-cy="product-quantity-1"
+        readonly=""
+        type="text"
+        value="2"
+      />
+      <button
+        class="sc-iBPTVF hjnMhy"
+        data-cy="increment-product-1"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="20"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="sc-pGaPU hIeSBB"
+    >
+      <span>
+        SUBTOTAL
+      </span>
+      <strong
+        data-cy="product-subtotal-1"
+      >
+        R$ 59,98
+      </strong>
+       // Add data-cy for subtotal
+    </div>
+    <button
+      class="sc-iBPTVF hjnMhy"
+      data-cy="remove-product-1"
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="20"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+        />
+      </svg>
+    </button>
+  </li>
+</DocumentFragment>
+`;

@@ -38,15 +38,20 @@ export function CartProductRow({
   return (
     <Table.Row key={product.id}>
       <ImageAndTitle>
-        <img src={product.imageUrl} alt={product.title} />
+        <img 
+          src={product.imageUrl} 
+          alt={product.title} 
+          data-cy={`product-image-${product.id}`} // Add data-cy here for the image
+        />
         <div>
           <strong>{product.title}</strong>
-          <span>{formatPrice(product.price)}</span>
+          <span data-cy={`product-price-${product.id}`}>{formatPrice(product.price)}</span> // And here for the price
         </div>
       </ImageAndTitle>
       <InputContainer>
         <ActionButton
           type="button"
+          data-cy={`decrement-product-${product.id}`} // Add data-cy for decrement action
           disabled={isLoading || product.quantity <= 1}
           onClick={() => handleProductDecrement(product)}
         >
@@ -54,12 +59,13 @@ export function CartProductRow({
         </ActionButton>
         <input
           type="text"
-          data-testid="product-amount"
+          data-cy={`product-quantity-${product.id}`} // Add data-cy for product quantity input
           readOnly
           value={product.quantity}
         />
         <ActionButton
           type="button"
+          data-cy={`increment-product-${product.id}`} // Add data-cy for increment action
           onClick={() => handleProductIncrement(product)}
           disabled={isLoading}
         >
@@ -68,10 +74,11 @@ export function CartProductRow({
       </InputContainer>
       <SubTotalContainer>
         <span>SUBTOTAL</span>
-        <strong>{formatPrice(product.amount)}</strong>
+        <strong data-cy={`product-subtotal-${product.id}`}>{formatPrice(product.amount)}</strong> // Add data-cy for subtotal
       </SubTotalContainer>
       <ActionButton
         type="button"
+        data-cy={`remove-product-${product.id}`} // Add data-cy for remove action
         onClick={() => handleRemoveProduct(product.id)}
         disabled={isLoading}
       >
